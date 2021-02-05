@@ -11,11 +11,11 @@
 	<h1>Liste des articles</h1>
 
 	<c:forEach items="${articles}" var="article">
-		<h2>
-			<a href="/article">${article.designation}</a>
-		</h2>(${article.categorie.nom}) (nbPts: ${article.nbPoints}) (stock:
+		<a href="/article">${article.designation}</a>(${article.categorie.nom}) (nbPts: ${article.nbPoints}) (stock:
 			${article.stock})
+		<br>
 	</c:forEach>
-
+	<br>
+	nombre d'article ${articles.size()}
 </body>
 </html>
