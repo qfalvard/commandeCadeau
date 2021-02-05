@@ -18,6 +18,10 @@
 		 <input type="text" name="EMAIL" placeHolder="Email" /> <br />
   		 <input type="password" name="MOT_DE_PASSE" placeHolder="Mot de passe" /> <br/>
 			<select name="ID_VILLE">
+			<!-- La JSP reçoit de la servlet une liste de villeet parcourt cette liste en utilisant
+			la balise foreach de la bibliotheque de valise JSTL (Java Standrat Tag Library)
+			item : ce que l'on veut parcourir
+			var : variable de boucle -->
 			<c:forEach items="${villes}" var="ville">
 				<option value="${ville.id}">${ville.nom}</option>
 			</c:forEach>
