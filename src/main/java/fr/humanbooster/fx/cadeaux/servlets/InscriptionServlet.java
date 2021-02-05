@@ -19,7 +19,7 @@ import fr.humanbooster.fx.cadeaux.service.impl.VilleServiceImpl;
  * Servlet implementation class InscriptionServlet
  * la servlet assure le traitement des requetes http
  */
-@WebServlet(urlPatterns = { "/InscriptionServlet", "/inscription", "/index" }, loadOnStartup = 1)
+@WebServlet(urlPatterns = { "/inscription" }, loadOnStartup = 1)
 public class InscriptionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

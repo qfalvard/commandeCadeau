@@ -7,6 +7,7 @@
 		<br>
 		<a href="connexion">Connexion</a>
 		<br>
+		<a href="articles">Articles</a>
 	</c:when>
 	<c:when test="${sessionScope.utilisateur ne null }">
 		<a href="deconnexion">Deconnexion</a>
