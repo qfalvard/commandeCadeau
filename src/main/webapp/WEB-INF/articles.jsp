@@ -26,7 +26,22 @@
 	<c:forEach items="${articles}" var="article">
 		<a href="article?ID=${article.id}">${article.designation}</a>(${article.categorie.nom}) (nbPts: ${article.nbPoints}) (stock:
 			${article.stock})
+<!-- 			// On rajoute de la couleur -->
+<c:choose>
+    <c:when test="${article.stock > 5}">
+        <c:set var="color" value="#1DF942"></c:set>
+    </c:when>
+    <c:when test="${article.stock == 0}">
+        <c:set var="color" value="#F91D1D"></c:set>
+    </c:when>
+    <c:otherwise>
+        <c:set var="color" value="#F78315"></c:set>
+    </c:otherwise>
+</c:choose>
+
+<span style="color:${color};"><c:out value="stock: ${article.stock}" /></span>
 		<br>
+
 	</c:forEach>
 	<br>
 	nombre d'article ${articles.size()}
