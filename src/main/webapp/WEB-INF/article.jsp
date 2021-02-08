@@ -20,10 +20,12 @@
 
     <p>Description : ${article.description}</p>
 
-    <form action="commande" method="POST">
-        <label for="quantite"> Quantité</label>
+    <form action="commande" method="post">
+        <label for="quantite">Quantité</label>
         <input type="number" name="QUANTITE" id="quantite">
-        <button>Commander</button>
+        <input type="hidden" name="ID" value="${article.id}">
+<!--         <button>Commander</button> -->
+<input type="submit" value="commande" />
     </form>
 </body>
 </html>

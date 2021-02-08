@@ -1,7 +1,6 @@
 package fr.humanbooster.fx.cadeaux.servlets;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +19,7 @@ import fr.humanbooster.fx.cadeaux.service.impl.ArticleServiceImpl;
 public class ArticleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	ArticleService articleService = new ArticleServiceImpl();
+	private ArticleService articleService = new ArticleServiceImpl();
 	
     /**
      * @see HttpServlet#HttpServlet()

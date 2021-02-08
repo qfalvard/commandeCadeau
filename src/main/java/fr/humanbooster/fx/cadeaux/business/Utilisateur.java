@@ -16,7 +16,7 @@ public class Utilisateur {
 	private int nbPoints;
 	private List<Commande> commandes;
 	private static Long counter = 0L;
-	private static final int NB_POINT_INIT = 1000;
+	private static int NB_POINT_INIT = 1000;
 	
 	public Utilisateur() {
 		super();

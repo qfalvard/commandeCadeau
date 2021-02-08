@@ -10,6 +10,17 @@
 <body>
 
 	<jsp:include page="entete.jsp" />
+	
+	<c:if test="${utilisateurNonConnecte ne null}">
+		<span style="color : red;">${utilisateurNonConnecte}</span>
+		<br>
+	</c:if>
+	
+	<c:if test="${nofication ne null}">
+		<span style="color : red;">${notification}</span>
+		<br>
+	</c:if>
+	
 	<h1>Liste des articles</h1>
 
 	<c:forEach items="${articles}" var="article">
