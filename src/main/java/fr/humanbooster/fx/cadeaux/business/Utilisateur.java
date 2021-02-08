@@ -13,13 +13,16 @@ public class Utilisateur {
 	private String motDePasse;
 	private Date dateInscription;
 	private Ville ville;
+	private int nbPoints;
 	private List<Commande> commandes;
 	private static Long counter = 0L;
+	private static final int NB_POINT_INIT = 1000;
 	
 	public Utilisateur() {
 		super();
 		this.id = ++counter;
 		this.commandes = new ArrayList<Commande>();
+		this.nbPoints = NB_POINT_INIT;
 	}
 	
 	public Utilisateur(String nom, String prenom, String email, String mdp, Ville ville) {
@@ -96,11 +99,19 @@ public class Utilisateur {
 		this.commandes = commandes;
 	}
 
+	public int getNbPoints() {
+		return nbPoints;
+	}
+
+	public void setNbPoints(int nbPoints) {
+		this.nbPoints = nbPoints;
+	}
+
 	@Override
 	public String toString() {
-		return "Utilisateur [idUtilisateur=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email="
-				+ email + ", motDePasse=" + motDePasse + ", dateInscription=" + dateInscription + ", ville=" + ville
-				+ "]";
+		return "Utilisateur [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", motDePasse="
+				+ motDePasse + ", dateInscription=" + dateInscription + ", ville=" + ville + ", commandes=" + commandes
+				+ ", nbPoints=" + nbPoints + "]";
 	}
 	
 	
