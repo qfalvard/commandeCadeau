@@ -17,8 +17,8 @@ import fr.humanbooster.fx.cadeaux.service.impl.ArticleServiceImpl;
 import fr.humanbooster.fx.cadeaux.service.impl.CategorieServiceImpl;
 
 /**
- * Servlet implementation class ArticlesServlet
- * urlPatterns définit toutes les urls que la servlet prend en charge
+ * Servlet implementation class ArticlesServlet urlPatterns définit toutes les
+ * urls que la servlet prend en charge
  */
 @WebServlet(urlPatterns = { "/catalogue", "/articles", "/index" }, loadOnStartup = 1)
 public class ArticlesServlet extends HttpServlet {
@@ -31,7 +31,7 @@ public class ArticlesServlet extends HttpServlet {
 	 * @see HttpServlet#HttpServlet()
 	 */
 	public ArticlesServlet() {
-        super();
+		super();
 		if (categorieService.recupereCategories().isEmpty() && articleService.recupereArticles().isEmpty()) {
 			Categorie electromenager = categorieService.ajouterCategorie("Electromenager");
 			Categorie jouet = categorieService.ajouterCategorie("Jouets");
