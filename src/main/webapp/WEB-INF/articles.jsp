@@ -8,14 +8,17 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<jsp:include page="entete.jsp" />
 	<h1>Liste des articles</h1>
 
 	<c:forEach items="${articles}" var="article">
-		<a href="/article">${article.designation}</a>(${article.categorie.nom}) (nbPts: ${article.nbPoints}) (stock:
+		<a href="article?ID=${article.id}">${article.designation}</a>(${article.categorie.nom}) (nbPts: ${article.nbPoints}) (stock:
 			${article.stock})
 		<br>
 	</c:forEach>
 	<br>
 	nombre d'article ${articles.size()}
+	<br>
 </body>
 </html>
